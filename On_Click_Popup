@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Click Popup</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+  
+</head>
+<style type="text/css">
+.btna{padding: 8px 24px;;}
+.popup{width:0 auto; background-color: #fff; padding: 10px; text-align: center; 
+    border-radius: 10px; visibility: hidden; position: absolute;}
+.popup1{width:0 auto; background-color: #fff; padding: 10px; text-align: center; 
+    border-radius: 10px; visibility:inherit !important; position: absolute; }
+.popup i {
+    font-size: 65px;
+    margin-top: -25px;
+    margin-bottom: 30px;
+    color: #19b356;
+}
+.popup h2{font-size: 28px;
+    margin-bottom: 11px;}
+.popup p{margin: 0px 20px}
+.popup .btns{background: #000;
+    color: #fff;
+    padding: 3px 18px;
+    border-radius: 5px;
+    margin: 10px;}
+</style>
+<body>
+  <div class="container">
+   
+<button class="btna" onclick="pupusf()">Submit</button>
+<div class="popup" id="poups">
+    <i class="fa-solid fa-check-to-slot"></i>
+    <h2>Thank You !</h2>
+    <p>Your Details has been succesfully submited Thank !</p>
+    <button class="btns" onclick="closePup()">ok</button>
+</div>
+  
+  </div>
+   
+</body>
+<script>
+var pname = document.getElementById('poups');
+function pupusf(){
+    pname.classList.add('popup1');
+}
+function closePup(){
+    pname.classList.remove('popup1');
+}
+
+</script>
+</html>
