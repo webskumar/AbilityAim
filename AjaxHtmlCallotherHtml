@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js  "></script>
+</head>
+<style>
+    ul li {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    color: #086840;
+    line-height: 50px;
+    font-family: arial;
+    background-color: #eee;
+    width: 300px;
+    padding-left: 20px;
+    list-style: none;
+}
+</style>
+<body>
+    <h1>Get Html Thought Ajax Get</h1>
+    <div id="contents"></div>
+    <script>
+        const shr = new XMLHttpRequest();
+        const eml = document.getElementById('contents');
+
+        shr.onload = function() {
+            if(this.status === 200) {
+                eml.innerHTML = shr.responseText;
+            } else{
+                console.warn('Did not recieve 200 ok from response !')
+            }
+        };
+
+        shr.open('get', 'text.html');
+        shr.send();
+    </script>
+</body>
+</html>
+
+
+
+
+======================================================================================text.html============================================================================
+<ul>
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Apricot</li>
+    <li>Naranjilla</li>
+</ul>
